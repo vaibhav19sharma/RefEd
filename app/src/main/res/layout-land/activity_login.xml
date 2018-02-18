@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         tools:text="Enter your Username" />
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/edtUsername"
         android:layout_below="@+id/edtUsername"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="textPersonName"
         tools:text="Enter your Password" />
@@ -34,47 +35,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="16dp"
         android:text="Login" />
 
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnLogin"
+        android:layout_alignStart="@+id/btnLogin"
         android:layout_below="@+id/btnLogin"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="13dp"
         android:text="Signup" />
-
-    <TextView
-        android:id="@+id/txtWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:includeFontPadding="true"
-        android:text="Welcome to RefEd"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/edtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edtPassword"
-        android:layout_below="@+id/edtPassword"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/edtAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtWelcome"
-        android:layout_below="@+id/edtName"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="number"
-        tools:text="Enter your Age" />
 </RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "841868732264",
+    "firebase_url": "https://refed-4486a.firebaseio.com",
+    "project_id": "refed-4486a",
+    "storage_bucket": "refed-4486a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841868732264:android:14fb4669b75b3648",
+        "android_client_info": {
+          "package_name": "com.example.vaibh.refed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841868732264-imgpt50etccg8tedod88rcg3loejnilr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDn_HdPENbU0N1XzL6iTGRunzZGHvtIKs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
