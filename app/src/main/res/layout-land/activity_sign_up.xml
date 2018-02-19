@@ -16,12 +16,12 @@
             android:id="@+id/edtUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/edtAge"
+            android:layout_alignEnd="@+id/txtWelcome"
             android:layout_below="@+id/txtWelcome"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="39dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Enter your Username" />
+            android:hint="Enter your Username"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/edtPassword"
@@ -30,14 +30,14 @@
             android:layout_alignStart="@+id/edtUsername"
             android:layout_below="@+id/edtUsername"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Enter your Password" />
+            android:hint="Enter your Password"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edtHostCountry"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:text="Signup" />
 
@@ -53,43 +53,14 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/edtName"
+            android:id="@+id/edtConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/edtPassword"
             android:layout_below="@+id/edtPassword"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Name" />
+            android:hint="Confirm Password"
+            android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/edtAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtName"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="Enter your Age" />
-
-        <EditText
-            android:id="@+id/edtHomeCountry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/edtAge"
-            android:layout_below="@+id/edtAge"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Home Country" />
-
-        <EditText
-            android:id="@+id/edtHostCountry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/edtHomeCountry"
-            android:layout_below="@+id/edtHomeCountry"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Host Country" />
     </RelativeLayout>
 </ScrollView>
