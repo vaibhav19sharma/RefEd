@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#73cd6a"
     tools:context="com.example.vaibh.refed.WelcomeScreenTwo">
 
-    <TextView
-        android:id="@+id/txtMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
-        android:text="Let's select an Avatar!"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="110dp" />
+    <com.john.waveview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#73cd6a"
+        app:above_wave_color="@android:color/white"
+        app:blow_wave_color="@android:color/white"
+        app:progress="80"
+        app:wave_height="little"
+        app:wave_hz="normal"
+        app:wave_length="middle" >
+
+    </com.john.waveview.WaveView>
 </RelativeLayout>

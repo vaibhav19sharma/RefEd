@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/RefEd.iml" filepath="$PROJECT_DIR$/RefEd.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ExpandableButtonMenu/library/library.iml" filepath="$PROJECT_DIR$/../ExpandableButtonMenu/library/library.iml" />
+      <module fileurl="file://C:\Users\vaibh.iml" filepath="C:\Users\vaibh.iml" />
     </modules>
   </component>
 </project>

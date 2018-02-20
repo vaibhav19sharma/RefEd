@@ -65,7 +65,7 @@
         android:layout_below="@+id/mltHome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
-        android:text="Next" />
+        android:text="Next/Update" />
 
     <TextView
         android:id="@+id/txtnext"
