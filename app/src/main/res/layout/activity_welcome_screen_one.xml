@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#73cd6a"
+    tools:context="com.example.vaibh.refed.WelcomeScreenOne">
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtAge"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Enter your Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtName"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter your Age"
+        android:inputType="numberSigned" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mltHost"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtAge"
+        android:layout_below="@+id/edtAge"
+        android:hint="Host Country"
+        android:focusable="false"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mltHome"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mltHost"
+        android:layout_below="@+id/mltHost"
+        android:hint="Home Country"
+        android:focusable="false"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mltHome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Next/Update" />
+
+    <TextView
+        android:id="@+id/txtnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:text="Press Next to select an Avatar"
+        android:textAllCaps="false"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
