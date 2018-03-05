@@ -21,7 +21,8 @@
         <activity android:name=".Login" />
         <activity android:name=".WelcomeScreenOne" />
         <activity android:name=".SignUp" />
-        <activity android:name=".WelcomeScreenTwo"></activity>
+        <activity android:name=".Avatars">
+        </activity>
     </application>
 
 </manifest>

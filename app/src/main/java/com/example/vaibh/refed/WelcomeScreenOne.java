@@ -64,34 +64,12 @@ public class WelcomeScreenOne extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-<<<<<<< HEAD
-                String dataName = dataSnapshot.child("Name").getValue().toString();
-                if(!dataName.isEmpty()){
-                    edtName.setText(dataName);
-                }
-
-                String dataAge = dataSnapshot.child("Age").getValue().toString();
-                Log.i("test",dataAge);
-                if(!dataAge.isEmpty()){
-                    edtAge.setText(dataAge);
-                }
-
-//                String dataHomeCountry = dataSnapshot.child("Home_Country").getValue().toString();
-//                Log.i("test", dataHomeCountry);
-//                if(!dataHomeCountry.isEmpty()){
-//                    mltHome.setText(dataHomeCountry);
-//                }
-//
-//                String dataHostCountry = dataSnapshot.child("Host_Country").getValue().toString();
-//                if(!dataHostCountry.isEmpty()){
-//                    mltHost.setText(dataHostCountry);
-//                }
-=======
 
                 if(dataSnapshot.child("Name").exists()){
                     String dataName = dataSnapshot.child("Name").getValue().toString();
                     edtName.setText(dataName);
                 }
+
 
                 if(dataSnapshot.child("Age").exists()){
                     String dataAge = dataSnapshot.child("Age").getValue().toString();
@@ -99,17 +77,16 @@ public class WelcomeScreenOne extends AppCompatActivity {
                 }
 
 
+
                 if(dataSnapshot.child("Home_Country").exists()){
                     String dataHomeCountry = dataSnapshot.child("Home_Country").getValue().toString();
                     mltHome.setText(dataHomeCountry);
                 }
 
-
                 if(dataSnapshot.child("Host_Country").exists()){
                     String dataHostCountry = dataSnapshot.child("Host_Country").getValue().toString();
                     mltHost.setText(dataHostCountry);
                 }
->>>>>>> 9400b52545b78d2eecb9d269e32c4837b3946817
 
 
 
@@ -187,7 +164,7 @@ public class WelcomeScreenOne extends AppCompatActivity {
 
                     currentUser.setValue(addInformation);
 
-                    Intent setAvatar = new Intent(getApplicationContext(), WelcomeScreenTwo.class);
+                    Intent setAvatar = new Intent(getApplicationContext(), Avatars.class);
                     startActivity(setAvatar);
                 }
             }
