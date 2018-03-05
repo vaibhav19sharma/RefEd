@@ -1,17 +1,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#73cd6a"
+    android:orientation="vertical"
     tools:context="com.example.vaibh.refed.Avatars">
 
-    <in.goodiebag.carouselpicker.CarouselPicker
-        android:id="@+id/carouselPicker1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        app:items_visible="three" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Select an Avatar!"
+            android:textStyle="bold|italic" />
+
+        <in.goodiebag.carouselpicker.CarouselPicker
+            android:id="@+id/carouselPicker1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:items_visible="three">
+
+        </in.goodiebag.carouselpicker.CarouselPicker>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
 
 </LinearLayout>

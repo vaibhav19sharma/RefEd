@@ -21,8 +21,11 @@
         <activity android:name=".Login" />
         <activity android:name=".WelcomeScreenOne" />
         <activity android:name=".SignUp" />
-        <activity android:name=".Avatars">
-        </activity>
+        <activity android:name=".Avatars"></activity>
+        <activity
+            android:name=".UserDashboard"
+            android:label="@string/title_activity_user_dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

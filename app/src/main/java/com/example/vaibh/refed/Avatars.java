@@ -27,7 +27,7 @@ import in.goodiebag.carouselpicker.CarouselPicker;
 public class Avatars extends AppCompatActivity {
 
     CarouselPicker carouselPicker1;
-    TextView txtSelect;
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class Avatars extends AppCompatActivity {
 
         carouselPicker1 = (CarouselPicker) findViewById(R.id.carouselPicker1);
 
-        txtSelect = findViewById(R.id.txtSelect);
+        btnNext = findViewById(R.id.btnNext);
 
         //Carousel w all images
         List<CarouselPicker.PickerItem> itemsImages = new ArrayList<>();
@@ -47,6 +47,15 @@ public class Avatars extends AppCompatActivity {
         CarouselPicker.CarouselViewAdapter imageAdapter = new CarouselPicker.CarouselViewAdapter(this, itemsImages, 0);
         carouselPicker1.setAdapter(imageAdapter);
 
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent dashboard = new Intent(getApplicationContext(),UserDashboard.class);
+                startActivity(dashboard);
+
+            }
+        });
 
     }
 }
