@@ -64,6 +64,7 @@ public class WelcomeScreenOne extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+<<<<<<< HEAD
                 String dataName = dataSnapshot.child("Name").getValue().toString();
                 if(!dataName.isEmpty()){
                     edtName.setText(dataName);
@@ -85,6 +86,30 @@ public class WelcomeScreenOne extends AppCompatActivity {
 //                if(!dataHostCountry.isEmpty()){
 //                    mltHost.setText(dataHostCountry);
 //                }
+=======
+
+                if(dataSnapshot.child("Name").exists()){
+                    String dataName = dataSnapshot.child("Name").getValue().toString();
+                    edtName.setText(dataName);
+                }
+
+                if(dataSnapshot.child("Age").exists()){
+                    String dataAge = dataSnapshot.child("Age").getValue().toString();
+                    edtAge.setText(dataAge);
+                }
+
+
+                if(dataSnapshot.child("Home_Country").exists()){
+                    String dataHomeCountry = dataSnapshot.child("Home_Country").getValue().toString();
+                    mltHome.setText(dataHomeCountry);
+                }
+
+
+                if(dataSnapshot.child("Host_Country").exists()){
+                    String dataHostCountry = dataSnapshot.child("Host_Country").getValue().toString();
+                    mltHost.setText(dataHostCountry);
+                }
+>>>>>>> 9400b52545b78d2eecb9d269e32c4837b3946817
 
 
 
