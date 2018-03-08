@@ -1,6 +1,8 @@
 package com.example.vaibh.refed;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
@@ -37,13 +39,12 @@ public class Avatars extends AppCompatActivity {
         carouselPicker1 = (CarouselPicker) findViewById(R.id.carouselPicker1);
 
         btnNext = findViewById(R.id.btnNext);
-
         //Carousel w all images
         List<CarouselPicker.PickerItem> itemsImages = new ArrayList<>();
-        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.avatarcat));
-        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.avatarfrog));
-        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.avatarlion));
-        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.avatartiger));
+        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.catav));
+        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.frogav));
+        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.lionav));
+        itemsImages.add(new CarouselPicker.DrawableItem(R.drawable.tigerav));
         CarouselPicker.CarouselViewAdapter imageAdapter = new CarouselPicker.CarouselViewAdapter(this, itemsImages, 0);
         carouselPicker1.setAdapter(imageAdapter);
 
