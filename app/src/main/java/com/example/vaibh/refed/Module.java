@@ -29,10 +29,12 @@ import java.util.List;
 public class Module extends AppCompatActivity {
 
     String name;
+    int imgID;
     int percentProgress;
 
-    public Module(String name, int progress){
+    public Module(String name, int imgID, int progress){
         this.name = name;
+        this.imgID = imgID;
         this.percentProgress = progress;
     }
 

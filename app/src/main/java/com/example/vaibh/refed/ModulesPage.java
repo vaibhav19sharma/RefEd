@@ -13,19 +13,21 @@ import android.widget.Toast;
 
 public class ModulesPage extends Activity{
 
+    Module module1 = new Module("Human Rights",R.drawable.ic_menu_camera,40);
+    Module module2 = new Module("Math", R.drawable.ic_menu_send,30);
+    Module module3 = new Module("History", R.drawable.ic_menu_share,60);
+
     ListView list;
     String[] itemname ={
-            "Module1",
-            "Camera",
-            "Global",
-            "FireFox"
+            module1.name,
+            module2.name,
+            module3.name
     };
 
     Integer[] imgid={
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_send,
-            R.drawable.ic_menu_manage,
-            R.drawable.ic_menu_share
+            module1.imgID,
+            module2.imgID,
+            module3.imgID
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
