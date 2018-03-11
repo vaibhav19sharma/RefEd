@@ -161,6 +161,7 @@ public class WelcomeScreenOne extends AppCompatActivity {
                     addInformation.put("Age", age);
                     addInformation.put("Host_Country", hostName);
                     addInformation.put("Home_Country", homeName);
+                    addInformation.put("Avatar","frogav");
 
                     currentUser.setValue(addInformation);
 
