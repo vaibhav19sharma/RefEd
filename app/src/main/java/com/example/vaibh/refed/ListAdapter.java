@@ -28,7 +28,7 @@ public class ListAdapter extends ArrayAdapter<String> {
         View rowView=inflater.inflate(R.layout.module_list, null,true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.imgBadge);
         TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
 
         txtTitle.setText(itemname[position]);

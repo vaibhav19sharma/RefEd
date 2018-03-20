@@ -36,7 +36,7 @@ public class UserDashboard extends AppCompatActivity
     ImageView imgAvatar;
     private FirebaseAuth mAuth;
     String uid, imageName;
-    TextView txtName;
+    TextView txtName, txtWelcome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +66,7 @@ public class UserDashboard extends AppCompatActivity
         txtName = header.findViewById(R.id.txtName);
         imgAvatar = header.findViewById(R.id.imgAvatar);
 
+        txtWelcome = findViewById(R.id.txtWelcome);
 
         uid = mAuth.getCurrentUser().getUid();
         DatabaseReference currentUser_read = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
@@ -77,6 +78,7 @@ public class UserDashboard extends AppCompatActivity
                 if(dataSnapshot.child("Name").exists()) {
                     String UserName = dataSnapshot.child("Name").getValue().toString();
                     txtName.setText(UserName);
+                    txtWelcome.setText("Welcome " + UserName);
 
                 }
 
@@ -91,6 +93,7 @@ public class UserDashboard extends AppCompatActivity
 
             }
         });
+
 
 
     }
@@ -139,10 +142,13 @@ public class UserDashboard extends AppCompatActivity
 
         } else if (id == R.id.nav_module) {
 
-//            Intent module = new Intent(getApplicationContext(),ModulesPage.class);
-//            startActivity(module);
+            Intent module = new Intent(getApplicationContext(),ModulesPage.class);
+            startActivity(module);
 
-        } else if (id == R.id.nav_anything) {
+        } else if (id == R.id.nav_ach) {
+
+            Intent achievements = new Intent(getApplicationContext(),Achievements.class);
+            startActivity(achievements);
 
         } else if (id == R.id.nav_share) {
 
