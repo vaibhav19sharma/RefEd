@@ -1,17 +1,13 @@
 package com.example.vaibh.refed;
 
-import android.app.Activity;
-import android.app.ListActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
-public class ModulesPage extends Activity{
+public class ModulesPage extends AppCompatActivity {
 
     Module module1 = new Module("Human Rights",R.drawable.ic_menu_camera,40);
     Module module2 = new Module("Math", R.drawable.ic_menu_send,30);
@@ -32,13 +28,13 @@ public class ModulesPage extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.module_list);
+        setContentView(R.layout.activity_modules_page);
 
         ListAdapter adapter=new ListAdapter(this, itemname, imgid);
         list=(ListView)findViewById(R.id.list);
         list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new OnItemClickListener() {
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,

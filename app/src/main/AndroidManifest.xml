@@ -26,8 +26,8 @@
             android:name=".UserDashboard"
             android:label="@string/title_activity_user_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ModulesPage"/>
-        <activity android:name=".Achievements"></activity>
+        <activity android:name=".Achievements" />
+        <activity android:name=".ModulesPage"></activity>
     </application>
 
 </manifest>
