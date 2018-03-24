@@ -1,0 +1,97 @@
+{
+  "Module" : "Human Rights",
+  "Parts" : [
+    {
+      "Part_Name" : "Equality and Freedom",
+      "Articles" : [
+       {
+         "Name" : "Right to Equality",
+         "Learn" : "You are born free and equal in rights to every other human being. You have the ability to think and to tell right from wrong. You should treat others with friendship.",
+         "Rearrange" : [
+           " in rights to every other human being. ",
+           "You have the ability to think and to tell ",
+           "You are born free and equal ",
+           "right from wrong. You should treat ",
+           "others with friendship."
+           ],
+           "FillIn" : "You are born ___ and ___ in rights to ___ other human being. You have the ___ to think and to tell right from wrong. You should treat others with ___.",
+          "Vocab" : [
+              "free",
+              "ability",
+              "friendship",
+              "equal",
+              "every"
+          ]
+       },
+       {
+         "Name" : "Freedom from Discrimination",
+         "Learn" : "You have all these human rights no matter what your race, skin colour, sex, language, religion, opinions, family background, social or economic status, birth or nationality.",
+         "Rearrange" : [
+           "You have all these human rights ",
+           "or economic status, birth or nationality.",
+           "religion, opinions, family background, social ",
+           "no matter what your race, skin colour, sex, language, "
+           ],
+           "FillIn" : 
+           "You have all these ___ rights no matter what your race, ___ colour, sex, language, religion, opinions, family ___, social or ___ status, birth or nationality.",
+           "Vocab" : [
+             "background",
+             "skin",
+             "human",
+             "economic"
+             ]
+       },
+       {
+         "Name" : "Right of Life, Liberty, and Personal Security",
+         "Learn" : "You have the right to live, to be free and to feel safe.",
+         "Rearrange" : [
+           "and to feel safe.",
+           "You have the right to live, ",
+           "to be free "
+           ],
+          "FillIn" : "You have the right to ___, to be ___ and to feel ___.",
+          "Vocab" : [
+            "live",
+            "safe",
+            "free"
+            ]
+           
+       },
+       {
+         "Name" : "Freedom from Slavery",
+         "Learn" : "Nobody has the right to treat you as a slave, and you should not make anyone your slave.",
+         "Rearrange" : [
+           "Nobody has the right to ",
+           "and you should not make anyone your slave.",
+           "treat you as a slave, "
+           ],
+           "FillIn" : 
+           "Nobody has the ___ to treat you as a ___, and you should not make ___ your slave.",
+           "Vocab" : [
+             "slave",
+             "right",
+             "anyone"
+             ]
+       },
+       {
+         "Name" : "Freedom from Torture and Degrading Treatment",
+         "Learn" : "Nobody has the right to torture, harm or humiliate you.",
+         "Rearrange" : [
+           "Nobody has the ",
+           "or humiliate you.",
+           "right to torture, harm "
+           ],
+          "FillIn" : "Nobody has the ___ to torture, ___ or ___ you.",
+          "Vocab" : [
+            "harm",
+            "humiliate",
+            "right"
+          ]
+
+       }
+       
+      ]
+    }
+
+  ]
+}
