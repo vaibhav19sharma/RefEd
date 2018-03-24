@@ -3,6 +3,8 @@ package com.example.vaibh.refed;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +21,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -37,6 +40,7 @@ public class UserDashboard extends AppCompatActivity
     private FirebaseAuth mAuth;
     String uid, imageName;
     TextView txtName, txtWelcome;
+    VideoView vvintro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +70,16 @@ public class UserDashboard extends AppCompatActivity
         txtName = header.findViewById(R.id.txtName);
         imgAvatar = header.findViewById(R.id.imgAvatar);
 
+        vvintro = header.findViewById(R.id.vvIntro);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.introvideo);
+        vvintro.setVideoURI(uri);
+
+        vvintro.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                vvintro.start();
+            }
+        });
         txtWelcome = findViewById(R.id.txtWelcome);
 
         uid = mAuth.getCurrentUser().getUid();

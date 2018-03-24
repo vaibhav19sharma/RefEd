@@ -81,11 +81,13 @@ public class WelcomeScreenOne extends AppCompatActivity {
                 if(dataSnapshot.child("Home_Country").exists()){
                     String dataHomeCountry = dataSnapshot.child("Home_Country").getValue().toString();
                     mltHome.setText(dataHomeCountry);
+                    homeName = mltHome.getText().toString();
                 }
 
                 if(dataSnapshot.child("Host_Country").exists()){
                     String dataHostCountry = dataSnapshot.child("Host_Country").getValue().toString();
                     mltHost.setText(dataHostCountry);
+                    hostName = mltHost.getText().toString();
                 }
 
 
