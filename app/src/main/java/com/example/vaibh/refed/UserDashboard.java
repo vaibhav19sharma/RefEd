@@ -70,16 +70,21 @@ public class UserDashboard extends AppCompatActivity
         txtName = header.findViewById(R.id.txtName);
         imgAvatar = header.findViewById(R.id.imgAvatar);
 
-        vvintro = header.findViewById(R.id.vvIntro);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.introvideo);
-        vvintro.setVideoURI(uri);
+        final VideoView videoview = (VideoView) findViewById(R.id.vvIntro);
 
-        vvintro.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                vvintro.start();
+                mp.setLooping(true);
             }
         });
+
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.introvideo);
+
+        videoview.setVideoURI(uri);
+        videoview.requestFocus();
+
+        videoview.start();
         txtWelcome = findViewById(R.id.txtWelcome);
 
         uid = mAuth.getCurrentUser().getUid();
@@ -91,8 +96,9 @@ public class UserDashboard extends AppCompatActivity
                 imageName = dataSnapshot.child("Avatar").getValue().toString();
                 if(dataSnapshot.child("Name").exists()) {
                     String UserName = dataSnapshot.child("Name").getValue().toString();
+                    String cap = UserName.substring(0, 1).toUpperCase() + UserName.substring(1);
                     txtName.setText(UserName);
-                    txtWelcome.setText("Welcome " + UserName);
+                    txtWelcome.setText("Welcome " + cap);
 
                 }
 
