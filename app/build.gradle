@@ -33,6 +33,7 @@ dependencies {
     compile 'com.google.firebase:firebase-database:11.8.0'
     compile 'com.github.john990:WaveView:v0.9'
     compile 'com.github.Vatican-Cameos:CarouselPicker:v1.0'
+    implementation 'com.google.code.gson:gson:2.8.1'
 
 
 }

@@ -1,5 +1,6 @@
 package com.example.vaibh.refed;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,21 +10,18 @@ import android.widget.Toast;
 
 public class ModulesPage extends AppCompatActivity {
 
-    Module module1 = new Module("Human Rights",R.drawable.ic_menu_camera,40);
-    Module module2 = new Module("Math", R.drawable.ic_menu_send,30);
-    Module module3 = new Module("History", R.drawable.ic_menu_share,60);
+
+    Module module1 = new Module("Math", R.drawable.ic_menu_send,30);
+
 
     ListView list;
     String[] itemname ={
             module1.name,
-            module2.name,
-            module3.name
+
     };
 
     Integer[] imgid={
             module1.imgID,
-            module2.imgID,
-            module3.imgID
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +39,8 @@ public class ModulesPage extends AppCompatActivity {
                                     int position, long id) {
                 // TODO Auto-generated method stub
                 String Selecteditem= itemname[+position];
-                Toast.makeText(getApplicationContext(), Selecteditem, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),Activity_Math.class);
+                startActivity(i);
 
             }
         });
