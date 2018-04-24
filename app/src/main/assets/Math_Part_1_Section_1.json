@@ -1,17 +1,112 @@
 {
-  "Math":{
-    "Part 1":{
-      "Name":  "Ratios and Proportional Relationships",
-      "Section_1":{
-        "Basic Ratios":{"Question1":
-      ["The table below shows the amount of games available at a local school","img","What is the ratio of board games to chess games?","4/3,3/4*,3/2,5/3","counting the amount of board games and chess games will help you find the ratio between them."]
-        
-      }
-        
-      }
-      
-      
-    
-  }
-}
+  "Module" : "Mathematics",
+  "Parts" : [
+    {
+      "Part_Name" : "Ratios and Proportional Relationships",
+      "Sections" : [
+       {
+         "Name" : "Basic Ratios",
+         "Questions" : [
+           "The table shows the amount of games available at a local school. What is the ratio of board games to chess games?",
+           "What is the ratio of soccer balls to basketballs?",
+           "Nazmeen is an incredible artist. She has a bag full of tools she uses to draw. In her bag, she has 12 colorful pencils, 5 colorful pens and 10 sheets of paper. What is the ratio of pencils to papers?"],
+          "Choices" : [
+            ["4/3","3/4","3/2","5/3"],
+            ["5 to 3","3 to 5","5 to 4","5 to 8"],
+            ["12 to 5","5 to 10","10 to 12","12 to 10"]
+            ],
+         "Correct_Answers" : [
+           "b","a","d"
+         ],
+           "Hints" : [
+             "Counting the amount of board games and chess games will help you find the ratio between them.",
+             "Counting the amount of soccer balls and basketballs will help you find the ratio between them.",
+             "A ratio is the relationship between quantities of two different things. To solve this problem, simply pay attention to quantities given in the problem."
+             ]
+       },
+       {
+         "Name" : "Equivalent Ratios",
+         "Questions" : [
+           "Select one ratio that is equivalent to 2:3",
+           "Select one ratio that is equivalent to 1:2",
+           "Select the correct answer"],
+          "Choices" : [
+            ["7:6","6:9","4:7","6:8"],
+            ["2:4","7:8","5:6","3:4"],
+            ["1:2 is equivalent to 10:20","5:3 is equivalent to 3:5","4:6 is equivalent to 2:4","6:3 is equivalent to 30:60"]
+            ],
+         "Correct_Answers" : [
+           "b","a","a"
+         ],
+           "Hints" : [
+             "To find equivalent ratios in this problem, multiply both sides by the same number.",
+             "To find equivalent ratios in this problem, multiply both sides by the same number. In this problem, you can select more than one answer.",
+             "Equivalent ratios express the same relationship between numbers. To decide whether a ratio is equivalent or not, divide or multiply both sides by the same number."
+             ]
+       },
+       {
+         "Name" : "Ratios with Double Number Lines",
+         "Questions" : [
+           "The number lines show a rabbit that jumps once every five minutes.  How many times will the rabbit jump in 15 minutes?",
+           "The number lines show that the girl can draw five circles every 2 minutes. How many will she draw in 10 minutes?",
+           "The number lines show that 3 strawberries cost $5. Based on this ratio, what is the cost of 9 strawberries?"],
+          "Choices" : [
+            ["The rabbit will jump once in 15 minutes","The rabbit will jump twice in 15 minutes","The rabbit will jump three times in 15 minutes","The rabbit will jump four times in 15 minutes"],
+            ["She will draw 20 circles in 10 minutes","She will draw 5 circles in 10 minutes","She will draw 50 circles in 10 minutes","She will draw 25 circles in 10 minutes"],
+            ["9 strawberries will cost $15","9 strawberries will cost $5","9 strawberries will cost $10","9 strawberries will cost $30"]
+            ],
+         "Correct_Answers" : [
+           "c","d","a"
+         ],
+           "Hints" : [
+             "Based on the number lines, the rabbit jumps once every 5 minutes. This gives us a ratio of 1:5. Based on this ratio, think of an equivalent ratio to 1:5.",
+             "Based on the number lines, the girl draws 5 circles every 2 minutes. To solve this problem, find an equivalent ratio to 5:2.",
+             "Think about how many groups of 3 strawberries you have in 9 strawberries. Then, multiply this number by the cost of one group of 3 strawberries!"
+             ]
+       },
+      {
+         "Name" : "Ratios with Tape Diagrams",
+         "Questions" : [
+           "The diagram describes the numbers of blue and green t-shirts in a closet. What is the ratio of blue t-shirts to green t-shirts in this closet?",
+           "The diagram descibes the numbers of red and yellow houses in a neighborhood. What is the ratio of red houses to yellow houses?",
+           "The diagram shows the number of purple and gray motorcycles on the road. Complete the table with the missing values based on the ratio shown in the diagram."
+        ],
+          "Choices" : [
+            ["6:4","7:4","8:4","7:3"],
+            ["2:1","10:6","15:4","10:15"],
+            ["10, 12","16, 10","10, 16","12, 10"]
+            ],
+         "Correct_Answers" : [
+           "b","a","d"
+         ],
+           "Hints" : [
+             "Count the numbers of blue and green squares!",
+             "Think about equivalent ratios!",
+             "The first row on the table shows you how many purple and gray motorcycles there are on the road. To complete the rest of the table, think about their equivalent ratios."
+             ]
+       },
+       {
+         "Name" : "Comparing Rates",
+         "Questions" : [
+           "Complete the table to see how much it costs to take a cab in different cities. Select the most correct answer.",
+           "Pedro, Mohammed and Souzan were playing soccer. Pedro scored 10 goals in 5 matches, Mohammed scored 6 goals in 2 matches and Souzan scored 16 goals in 4 matches. Considering each one scored the same amount of goals in each match they played, what is the correct order of number of goals scored in one match from least to greatest?",
+           "The table shows distances and travel times for different boats. Which one has the greatest average speed?"
+        ],
+          "Choices" : [
+            ["The most expensive cab ride is in City A","The cheapest cab ride is in City B","City A and City C have the same cab riding cost","The most expensive cab ride is in City C"],
+            ["Mohammed, Pedro, Souzan","Souzan, Pedro, Mohammed","Mohammed, Souzan, Pedro","Souzan, Mohammed Pedro"],
+            ["Boat A has the greatest average speed","Boat A and B have the same average speed","Boat C has the greatest average speed","Boat D has the greatest average speed"]
+            ],
+         "Correct_Answers" : [
+           "c","a","c"
+         ],
+           "Hints" : [
+             "To calculate the cost per kilometer, simply divide the total price for the trip by the number of kilometers. Then, compare all three values to select the right answer.",
+             "Divide the number of goals by the number of matches each one played to find out how many goals each one scored in one match.Then, order the numbers from least to greatest.",
+             "Divide the distance travelled by the amount of hours travelled to find out the average speed."
+             ]
+       }
+    ]
+    }
+  ]
 }
