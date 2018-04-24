@@ -4,9 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../...iml" filepath="$PROJECT_DIR$/../...iml" />
       <module fileurl="file://$PROJECT_DIR$/../ExpandableButtonMenu/ExpandableButtonMenu.iml" filepath="$PROJECT_DIR$/../ExpandableButtonMenu/ExpandableButtonMenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RefEd.iml" filepath="$PROJECT_DIR$/RefEd.iml" />
+      <module fileurl="file://C:\Users\radia\Downloads\RefEd-master\RefEd.iml" filepath="C:\Users\radia\Downloads\RefEd-master\RefEd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RefEd-master.iml" filepath="$PROJECT_DIR$/RefEd-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ExpandableButtonMenu/library/library.iml" filepath="$PROJECT_DIR$/../ExpandableButtonMenu/library/library.iml" />
+      <module fileurl="file://C:\Users\radia.iml" filepath="C:\Users\radia.iml" />
     </modules>
   </component>
 </project>

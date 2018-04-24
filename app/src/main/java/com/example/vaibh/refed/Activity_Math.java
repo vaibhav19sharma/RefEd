@@ -22,7 +22,7 @@ public class Activity_Math extends AppCompatActivity {
         String temp = loadJSONFromAsset(c);
         Log.i("Check",temp);
 
-        JSONObject obj = new JSONObject(json_return_by_the_function);
+        //JSONObject obj = new JSONObject(json_return_by_the_function);
     }
 
     public String loadJSONFromAsset(Context context) {
