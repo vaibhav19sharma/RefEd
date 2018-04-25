@@ -35,7 +35,7 @@ class CustomAdapterAchievements extends ArrayAdapter<String>{
         ImageView imgBadge = (ImageView) customView.findViewById(R.id.imgBadge);
 
         moduleName.setText(modName);
-        imgBadge.setImageResource(R.drawable.flag_co);
+        imgBadge.setImageResource(R.drawable.check_false);
 
         return customView;
     }

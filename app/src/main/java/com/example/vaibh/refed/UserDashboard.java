@@ -39,6 +39,7 @@ public class UserDashboard extends AppCompatActivity
     ImageView imgAvatar;
     private FirebaseAuth mAuth;
     String uid, imageName;
+    ImageView imgMath, imgScience;
     TextView txtName, txtWelcome;
     VideoView vvintro;
     @Override
@@ -69,7 +70,8 @@ public class UserDashboard extends AppCompatActivity
 
         txtName = header.findViewById(R.id.txtName);
         imgAvatar = header.findViewById(R.id.imgAvatar);
-
+        imgMath = findViewById(R.id.imgMath);
+        imgScience = findViewById(R.id.imgScience);
         final VideoView videoview = (VideoView) findViewById(R.id.vvIntro);
 
         videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -111,6 +113,14 @@ public class UserDashboard extends AppCompatActivity
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+
+        imgMath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ModulesPage.class);
+                startActivity(i);
             }
         });
 
@@ -161,9 +171,6 @@ public class UserDashboard extends AppCompatActivity
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_module) {
-
-            Intent module = new Intent(getApplicationContext(),ModulesPage.class);
-            startActivity(module);
 
         } else if (id == R.id.nav_ach) {
 

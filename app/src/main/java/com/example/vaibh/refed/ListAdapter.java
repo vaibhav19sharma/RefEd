@@ -1,6 +1,7 @@
 package com.example.vaibh.refed;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ public class ListAdapter extends ArrayAdapter<String> {
         this.imgid=imgid;
     }
 
-    public View getView(int position,View view,ViewGroup parent) {
+    public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.module_list, null,true);
 
@@ -35,6 +36,7 @@ public class ListAdapter extends ArrayAdapter<String> {
         imageView.setImageResource(imgid[position]);
         extratxt.setText("Description "+itemname[position]);
         return rowView;
+
 
     };
 }

@@ -29,8 +29,8 @@
 
         <VideoView
             android:id="@+id/vvIntro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="400dp"
+            android:layout_height="200dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,6 +39,32 @@
         android:layout_weight="3"
         android:orientation="vertical">
 
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgMath"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/subject_icon_math" />
+
+            <ImageView
+                android:id="@+id/imgScience"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:layout_column="2"
+                app:layout_row="0"
+                app:srcCompat="@drawable/subject_icon_science" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                app:layout_column="1"
+                app:layout_row="0" />
+        </android.support.v7.widget.GridLayout>
     </LinearLayout>
 
 </LinearLayout>

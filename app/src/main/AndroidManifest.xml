@@ -28,7 +28,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Achievements" />
         <activity android:name=".ModulesPage" />
-        <activity android:name=".Activity_Math"></activity>
+        <activity android:name=".Activity_Math" />
+        <activity android:name=".MathModule1_Part1"></activity>
     </application>
 
 </manifest>

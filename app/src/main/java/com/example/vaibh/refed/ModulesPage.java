@@ -11,17 +11,20 @@ import android.widget.Toast;
 public class ModulesPage extends AppCompatActivity {
 
 
-    Module module1 = new Module("Math", R.drawable.ic_menu_send,30);
-
+    Module module1 = new Module(" Ratios and Proportional Relationships", R.drawable.ic_menu_send,0);
+    Module module2 = new Module("The Number System", R.drawable.ic_search,0);
+    Module module3 = new Module("Expressions and Equations", R.drawable.ic_search,0);
+    Module module4 = new Module("Geometry", R.drawable.ic_search,0);
+    Module module5 = new Module("Statistics and Probability ", R.drawable.ic_search,0);
 
     ListView list;
     String[] itemname ={
-            module1.name,
+            module1.name, module2.name,module3.name,module4.name,module5.name,
 
     };
 
     Integer[] imgid={
-            module1.imgID,
+            module1.imgID,module2.imgID,module3.imgID,module4.imgID,module5.imgID,
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +42,10 @@ public class ModulesPage extends AppCompatActivity {
                                     int position, long id) {
                 // TODO Auto-generated method stub
                 String Selecteditem= itemname[+position];
-                Intent i = new Intent(getApplicationContext(),Activity_Math.class);
-                startActivity(i);
-
+                if(position == 0) {
+                    Intent i = new Intent(getApplicationContext(), MathModule1_Part1.class);
+                    startActivity(i);
+                }
             }
         });
     }
