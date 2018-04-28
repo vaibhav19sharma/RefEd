@@ -1,5 +1,6 @@
 package com.example.vaibh.refed;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ public class MathModule1_Part1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_module1__part1);
-        String completedModules[] = {"Basic ratios","Equivalent ratios","Ratios with double number lines","Ratios with tape diagrams"};
+        final String completedModules[] = {"Basic Ratios","Equivalent Ratios","Ratios with Double Number Lines","Ratios with Tape Diagrams"};
 
         CustomAdapterAchievements achievementAdapter = new CustomAdapterAchievements(this, completedModules);
 
@@ -37,6 +38,9 @@ public class MathModule1_Part1 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String module = String.valueOf(parent.getItemAtPosition(position));
                 Toast.makeText(getApplicationContext(),module,Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getApplicationContext(),Activity_Math.class);
+                i.putExtra("Name",completedModules[position]);
+                startActivity(i);
             }
         });
     }
