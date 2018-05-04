@@ -27,6 +27,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="109dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:gravity="center_horizontal|center"
         android:text="TextView" />
 
@@ -37,6 +39,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="80dp"
+        android:layout_marginLeft="80dp"
         android:orientation="vertical">
 
         <RadioButton
@@ -72,6 +75,7 @@
         android:id="@+id/txtHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/imgImage"
+        android:layout_centerHorizontal="true"
         android:text="Select a Choice" />
 </RelativeLayout>

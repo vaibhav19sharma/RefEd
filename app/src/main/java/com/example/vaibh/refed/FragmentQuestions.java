@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class FragmentQuestions extends Fragment {
 
     View fragQuestion;
     RadioButton rb1, rb2, rb3, rb4;
+    ImageView imgImage;
     RadioGroup rdg1;
     String moduleName;
     org.json.JSONObject obj;
@@ -98,11 +100,13 @@ public class FragmentQuestions extends Fragment {
                 Toast.makeText(getContext(),"Item clicked : " + Integer.toString(checkedId),Toast.LENGTH_LONG).show();
             }
         });
-        fragQuestion.findViewById(R.id.imgImage).setVisibility(View.INVISIBLE);
+        fragQuestion.findViewById(R.id.imgImage);
             TextView txtheading = fragQuestion.findViewById(R.id.txtSubPart);
             TextView txtQuestion = fragQuestion.findViewById(R.id.txtContent);
+            imgImage = fragQuestion.findViewById(R.id.imgImage);
             txtheading.setText("Basic Ratios");
             txtQuestion.setText("The table shows the amount of games available at a local school. What is the ratio of board games to chess games?");
+            imgImage.setImageResource(R.drawable.mathpart1q1);
             rb1.setText("4/3");
             rb2.setText("3/4");
             rb3.setText("3/2");
