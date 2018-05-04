@@ -20,6 +20,7 @@ public class Activity_Math extends AppCompatActivity {
     private RadioButton rb1;
     private Bundle extra;
     private Fragment frag;
+    public static String moduleName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class Activity_Math extends AppCompatActivity {
 
         Context context = Activity_Math.this;
         extra = getIntent().getExtras();
-        String moduleName = extra.getString("Name");
+        moduleName = extra.getString("Name");
         Log.i("TESTFRAG",moduleName);
 
         c = Activity_Math.this;

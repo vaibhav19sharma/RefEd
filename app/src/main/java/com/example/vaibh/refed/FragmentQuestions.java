@@ -48,9 +48,27 @@ public class FragmentQuestions extends Fragment {
             is.close();
             json = new String(buffer, "UTF-8");
             obj = new JSONObject(json);
-            JSONArray questions = obj.getJSONArray("Sections");
-
-            rb1.setText(questions.getString(0));
+            rb1.setText("hi");
+            JSONObject parts = obj.getJSONObject("Parts");
+            JSONArray sections = parts.getJSONArray("Sections");
+            for(int i=0; i<5;i++){
+                JSONObject sec = sections.getJSONObject(i);
+                String name = sec.getString("Name");
+                Log.i("TESTmod",Activity_Math.moduleName);
+                Log.i("TESTname",Activity_Math.moduleName);
+                if(Activity_Math.moduleName == name){
+                    JSONArray choices = sec.getJSONArray("Choices");
+                    JSONArray choices2 = choices.getJSONArray(0);
+                    rb1.setText(choices2.getString(0));
+                    rb2.setText(choices2.getString(1));
+                    rb3.setText(choices2.getString(2));
+                    rb4.setText(choices2.getString(3));
+                    break;
+                }
+            }
+            //JSONObject sec = sections.getJSONObject(0);
+            //String name = sec.getString("Name");
+            //rb1.setText(name);
         } catch (IOException | JSONException ex) {
             ex.printStackTrace();
             json = null;

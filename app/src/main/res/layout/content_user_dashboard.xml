@@ -8,7 +8,9 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.vaibh.refed.UserDashboard"
-    tools:showIn="@layout/app_bar_user_dashboard">
+    tools:showIn="@layout/app_bar_user_dashboard"
+    android:background="@color/paleGreen"
+    >
 
     <TextView
         android:id="@+id/txtWelcome"
@@ -23,14 +25,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="633dp"
         android:layout_weight="2"
         android:orientation="vertical">
 
         <VideoView
             android:id="@+id/vvIntro"
-            android:layout_width="400dp"
+            android:layout_width="425dp"
             android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="13dp"
+            android:text="Modules"
+            android:textSize="40dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,25 +56,30 @@
 
             <ImageView
                 android:id="@+id/imgMath"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                app:srcCompat="@drawable/subject_icon_math" />
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="13dp"
+                app:srcCompat="@drawable/math" />
 
             <ImageView
                 android:id="@+id/imgScience"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="13dp"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:srcCompat="@drawable/science" />
+
+            <ImageView
+                android:id="@+id/imgBook"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="13dp"
                 app:layout_column="2"
                 app:layout_row="0"
-                app:srcCompat="@drawable/subject_icon_science" />
+                app:srcCompat="@drawable/book" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text=" "
-                app:layout_column="1"
-                app:layout_row="0" />
+
         </android.support.v7.widget.GridLayout>
     </LinearLayout>
 

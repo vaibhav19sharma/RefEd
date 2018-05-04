@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cce6ff"
+    android:background="@color/Green"
     tools:context="com.example.vaibh.refed.MainActivity">
 
     <ImageView
@@ -28,7 +28,7 @@
         android:layout_marginStart="59dp"
         android:layout_marginTop="39dp"
         android:text="TextView"
-        android:textColor="#cce6ff"/>
+        android:textColor="@color/Green"/>
 
     <TextView
         android:id="@+id/txtDescription"
