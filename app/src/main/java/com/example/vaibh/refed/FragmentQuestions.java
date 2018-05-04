@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -37,22 +38,23 @@ public class FragmentQuestions extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         fragQuestion= inflater.inflate(R.layout.fragment_questions, container, false);
-        String json;
-        rb1 = fragQuestion.findViewById(R.id.ChoiceA);
-
+        String json = null;
+        rb1 = (RadioButton)fragQuestion.findViewById(R.id.ChoiceA);
         try {
-            InputStream is = getActivity().getAssets().open("assets/fonts/Math_Part_1_Section_1.json");
+            InputStream is = getActivity().getAssets().open("Math_Part_1_Section_1.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             json = new String(buffer, "UTF-8");
             obj = new JSONObject(json);
-            rb1.setText(obj.getString("Module"));
-        } catch (IOException ex) {
+            JSONArray questions = obj.getJSONArray("Sections");
+
+            rb1.setText(questions.getString(0));
+        } catch (IOException | JSONException ex) {
             ex.printStackTrace();
-        } catch (JSONException ex) {
-            ex.printStackTrace();
+            json = null;
+            obj = null;
         }
 
         if (getArguments() != null) {

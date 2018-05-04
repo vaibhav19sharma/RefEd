@@ -38,7 +38,7 @@ public class Activity_Math extends AppCompatActivity {
         bundle.putString("Name",moduleName);
         myObj.setArguments(bundle);
         Log.i("TESTFRAG",moduleName + "sent");
-        //String json = loadJSONFromAsset("assets/fonts/Math_Part_1_Section_1");
+        //String json = loadJSONFromAsset("Math_Part_1_Section_1");
 
 
 

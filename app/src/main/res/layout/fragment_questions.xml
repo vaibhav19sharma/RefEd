@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentQuestions">
+    tools:context="com.example.vaibh.refed.FragmentQuestions">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -40,27 +40,25 @@
             android:id="@+id/ChoiceA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/A" />
+            />
 
         <RadioButton
             android:id="@+id/ChoiceB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="@string/B" />
+            />
 
         <RadioButton
             android:id="@+id/ChoiceC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="@string/C" />
+            />
 
         <RadioButton
             android:id="@+id/ChoiceD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/D" />
+            />
     </RadioGroup>
 
     <ImageView

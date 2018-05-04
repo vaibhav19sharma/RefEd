@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class ModulesPage extends AppCompatActivity {
 
 
-    Module module1 = new Module(" Ratios and Proportional Relationships", R.drawable.ic_menu_send,0);
+    Module module1 = new Module("Ratios and Proportional Relationships", R.drawable.ic_menu_send,0);
     Module module2 = new Module("The Number System", R.drawable.ic_search,0);
     Module module3 = new Module("Expressions and Equations", R.drawable.ic_search,0);
     Module module4 = new Module("Geometry", R.drawable.ic_search,0);
