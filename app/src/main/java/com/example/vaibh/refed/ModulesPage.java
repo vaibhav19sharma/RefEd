@@ -14,11 +14,14 @@ public class ModulesPage extends AppCompatActivity {
 
     VideoView vv2;
 
+
     Module module1 = new Module(" Ratios and Proportional Relationships", R.drawable.calculation,0);
     Module module2 = new Module("The Number System", R.drawable.calculation,0);
     Module module3 = new Module("Expressions and Equations", R.drawable.calculation,0);
     Module module4 = new Module("Geometry", R.drawable.calculation,0);
     Module module5 = new Module("Statistics and Probability ", R.drawable.calculation,0);
+
+
 
     ListView list;
     String[] itemname ={

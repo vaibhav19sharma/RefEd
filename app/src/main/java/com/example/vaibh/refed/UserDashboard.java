@@ -36,7 +36,7 @@ public class UserDashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    ImageView imgAvatar;
+    //ImageView imgAvatar;
     private FirebaseAuth mAuth;
     String uid, imageName;
     ImageView imgMath, imgScience;
@@ -69,7 +69,7 @@ public class UserDashboard extends AppCompatActivity
         View header=navigationView.getHeaderView(0);
 
         txtName = header.findViewById(R.id.txtName);
-        imgAvatar = header.findViewById(R.id.imgAvatar);
+        ImageView imgAvatar = header.findViewById(R.id.imgAvatar);
         imgMath = findViewById(R.id.imgMath);
         imgScience = findViewById(R.id.imgScience);
         final VideoView videoview = (VideoView) findViewById(R.id.vvIntro);
@@ -85,7 +85,7 @@ public class UserDashboard extends AppCompatActivity
 
         videoview.setVideoURI(uri);
         videoview.requestFocus();
-
+        imgAvatar.setImageResource(R.drawable.profile);
         videoview.start();
         txtWelcome = findViewById(R.id.txtWelcome);
 
@@ -106,7 +106,8 @@ public class UserDashboard extends AppCompatActivity
 
                 Context c = getApplicationContext();
                 int id = c.getResources().getIdentifier("drawable/"+ imageName, null, c.getPackageName());
-                imgAvatar.setImageResource(R.drawable.profile);
+
+
 
                 }
 

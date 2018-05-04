@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnLogin = findViewById(R.id.btnLogin);
-        signup = findViewById(R.id.btnSignup);
+        //signup = findViewById(R.id.btnSignup);
 
         edtUsername = findViewById(R.id.edtUsername);
         edtPassword = findViewById(R.id.edtPassword);
@@ -38,13 +38,13 @@ public class Login extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-        signup.setOnClickListener(new View.OnClickListener() {
+/*        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),SignUp.class);
                 startActivity(i);
             }
-        });
+        });*/
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +66,8 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.INVISIBLE);
                         if(task.isSuccessful()){
+                            //TEMPORARILY CHANGED TO DASHBOARD FOR DEMO
+
                             Intent welcome = new Intent(getApplicationContext(),UserDashboard.class);
                             welcome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             welcome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -37,22 +38,41 @@ public class FragmentQuestions extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         fragQuestion= inflater.inflate(R.layout.fragment_questions, container, false);
-        String json;
-        rb1 = fragQuestion.findViewById(R.id.ChoiceA);
-
+        String json = null;
+        rb1 = (RadioButton)fragQuestion.findViewById(R.id.ChoiceA);
         try {
-            InputStream is = getActivity().getAssets().open("assets/fonts/Math_Part_1_Section_1.json");
+            InputStream is = getActivity().getAssets().open("Math_Part_1_Section_1.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             json = new String(buffer, "UTF-8");
             obj = new JSONObject(json);
-            rb1.setText(obj.getString("Module"));
-        } catch (IOException ex) {
+            rb1.setText("hi");
+            JSONObject parts = obj.getJSONObject("Parts");
+            JSONArray sections = parts.getJSONArray("Sections");
+            for(int i=0; i<5;i++){
+                JSONObject sec = sections.getJSONObject(i);
+                String name = sec.getString("Name");
+                Log.i("TESTmod",Activity_Math.moduleName);
+                Log.i("TESTname",Activity_Math.moduleName);
+                if(Activity_Math.moduleName == name){
+                    JSONArray choices = sec.getJSONArray("Choices");
+                    JSONArray choices2 = choices.getJSONArray(0);
+                    rb1.setText(choices2.getString(0));
+                    rb2.setText(choices2.getString(1));
+                    rb3.setText(choices2.getString(2));
+                    rb4.setText(choices2.getString(3));
+                    break;
+                }
+            }
+            //JSONObject sec = sections.getJSONObject(0);
+            //String name = sec.getString("Name");
+            //rb1.setText(name);
+        } catch (IOException | JSONException ex) {
             ex.printStackTrace();
-        } catch (JSONException ex) {
-            ex.printStackTrace();
+            json = null;
+            obj = null;
         }
 
         if (getArguments() != null) {
