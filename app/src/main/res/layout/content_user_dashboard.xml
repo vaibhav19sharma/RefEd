@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,7 +26,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="633dp"
+        android:layout_height="450dp"
         android:layout_weight="2"
         android:orientation="vertical">
 
@@ -38,8 +39,8 @@
             android:id="@+id/textView"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="13dp"
+            android:layout_marginTop="100dp"
             android:text="Modules"
             android:textSize="40dp" />
     </LinearLayout>
@@ -56,15 +57,15 @@
 
             <ImageView
                 android:id="@+id/imgMath"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:padding="13dp"
                 app:srcCompat="@drawable/math" />
 
             <ImageView
                 android:id="@+id/imgScience"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:padding="13dp"
                 app:layout_column="1"
                 app:layout_row="0"
@@ -72,12 +73,36 @@
 
             <ImageView
                 android:id="@+id/imgBook"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:padding="13dp"
                 app:layout_column="2"
                 app:layout_row="0"
                 app:srcCompat="@drawable/book" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="            Math"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        Science"
+                app:layout_column="1"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Human Rights"
+                app:layout_column="2"
+                app:layout_row="1" />
 
 
         </android.support.v7.widget.GridLayout>
