@@ -1,21 +1,24 @@
 package com.example.vaibh.refed;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 public class ModulesPage extends AppCompatActivity {
 
+    VideoView vv2;
 
-    Module module1 = new Module(" Ratios and Proportional Relationships", R.drawable.ic_menu_send,0);
-    Module module2 = new Module("The Number System", R.drawable.ic_search,0);
-    Module module3 = new Module("Expressions and Equations", R.drawable.ic_search,0);
-    Module module4 = new Module("Geometry", R.drawable.ic_search,0);
-    Module module5 = new Module("Statistics and Probability ", R.drawable.ic_search,0);
+    Module module1 = new Module(" Ratios and Proportional Relationships", R.drawable.calculation,0);
+    Module module2 = new Module("The Number System", R.drawable.calculation,0);
+    Module module3 = new Module("Expressions and Equations", R.drawable.calculation,0);
+    Module module4 = new Module("Geometry", R.drawable.calculation,0);
+    Module module5 = new Module("Statistics and Probability ", R.drawable.calculation,0);
 
     ListView list;
     String[] itemname ={
@@ -33,7 +36,13 @@ public class ModulesPage extends AppCompatActivity {
 
         ListAdapter adapter=new ListAdapter(this, itemname, imgid);
         list=(ListView)findViewById(R.id.list);
+        vv2 = findViewById(R.id.videoView2);
         list.setAdapter(adapter);
+
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.part1_intro_video);
+        vv2.setVideoPath(uri.toString());
+        vv2.requestFocus();
+        vv2.start();
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

@@ -87,7 +87,7 @@ public class SignUp extends AppCompatActivity {
                                         progressDialog.dismiss();
                                         //User is successfully registered.
                                         // Redirects to Login Activity
-                                        Intent login = new Intent(getApplicationContext(), Login.class);
+                                        Intent login = new Intent(getApplicationContext(), WelcomeScreenOne.class);
                                         startActivity(login);
                                     } else {
                                         // Checks if the user is already registered

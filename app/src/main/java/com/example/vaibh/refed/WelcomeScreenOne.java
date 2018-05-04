@@ -167,7 +167,7 @@ public class WelcomeScreenOne extends AppCompatActivity {
 
                     currentUser.setValue(addInformation);
 
-                    Intent setAvatar = new Intent(getApplicationContext(), Avatars.class);
+                    Intent setAvatar = new Intent(getApplicationContext(), Login.class);
                     startActivity(setAvatar);
                 }
             }

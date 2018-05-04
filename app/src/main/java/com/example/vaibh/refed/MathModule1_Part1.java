@@ -26,7 +26,7 @@ public class MathModule1_Part1 extends AppCompatActivity {
 
         ListView listModules = (ListView) findViewById(R.id.lvParts);
         VideoView vvIntro = findViewById(R.id.vvIntro);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.part1_intro_video);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.ratiosandpropotions);
         vvIntro.setVideoPath(uri.toString());
         vvIntro.requestFocus();
         vvIntro.start();

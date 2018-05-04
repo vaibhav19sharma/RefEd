@@ -106,7 +106,7 @@ public class UserDashboard extends AppCompatActivity
 
                 Context c = getApplicationContext();
                 int id = c.getResources().getIdentifier("drawable/"+ imageName, null, c.getPackageName());
-                imgAvatar.setImageResource(id);
+                imgAvatar.setImageResource(R.drawable.profile);
 
                 }
 

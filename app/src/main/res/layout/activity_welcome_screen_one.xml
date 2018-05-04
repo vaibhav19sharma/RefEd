@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#73cd6a"
+    android:background="#cce6ff"
     tools:context="com.example.vaibh.refed.WelcomeScreenOne">
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_below="@+id/mltHome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
-        android:text="Next/Update" />
+        android:text="Sign me Up!" />
 
     <TextView
         android:id="@+id/txtnext"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSubmit"
         android:layout_centerHorizontal="true"
-        android:text="Press Next to select an Avatar"
+        android:text="Press Next to Login"
         android:textAllCaps="false"
         android:textStyle="bold|italic" />
 

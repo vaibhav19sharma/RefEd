@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.INVISIBLE);
                         if(task.isSuccessful()){
-                            Intent welcome = new Intent(getApplicationContext(),WelcomeScreenOne.class);
+                            Intent welcome = new Intent(getApplicationContext(),UserDashboard.class);
                             welcome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             welcome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(welcome);
