@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -27,7 +28,9 @@ public class FragmentQuestions extends Fragment {
     View fragQuestion;
     RadioButton rb1, rb2, rb3, rb4;
     RadioGroup rdg1;
+    String moduleName;
     org.json.JSONObject obj;
+    int tries =0;
     public FragmentQuestions() {
         // Required empty public constructor
     }
@@ -39,7 +42,14 @@ public class FragmentQuestions extends Fragment {
         // Inflate the layout for this fragment
         fragQuestion= inflater.inflate(R.layout.fragment_questions, container, false);
         String json = null;
+        if (getArguments() != null) {
+            String moduleName = getArguments().getString("params");
+            Log.i("TEST","Received: "+ moduleName);
+        }
         rb1 = (RadioButton)fragQuestion.findViewById(R.id.ChoiceA);
+        rb2 = fragQuestion.findViewById(R.id.ChoiceB);
+        rb3 = fragQuestion.findViewById(R.id.ChoiceC);
+        rb4 = fragQuestion.findViewById(R.id.ChoiceD);
         try {
             InputStream is = getActivity().getAssets().open("Math_Part_1_Section_1.json");
             int size = is.available();
@@ -56,7 +66,7 @@ public class FragmentQuestions extends Fragment {
                 String name = sec.getString("Name");
                 Log.i("TESTmod",Activity_Math.moduleName);
                 Log.i("TESTname",Activity_Math.moduleName);
-                if(Activity_Math.moduleName == name){
+                if(moduleName == name){
                     JSONArray choices = sec.getJSONArray("Choices");
                     JSONArray choices2 = choices.getJSONArray(0);
                     rb1.setText(choices2.getString(0));
@@ -75,10 +85,7 @@ public class FragmentQuestions extends Fragment {
             obj = null;
         }
 
-        if (getArguments() != null) {
-            String moduleName = getArguments().getString("params");
-            Log.i("TEST","Received: "+ moduleName);
-        }
+
 
         // To pull a value from the JSON file:
         // String section = obj.getJsonString("Section_Name");
@@ -91,7 +98,19 @@ public class FragmentQuestions extends Fragment {
                 Toast.makeText(getContext(),"Item clicked : " + Integer.toString(checkedId),Toast.LENGTH_LONG).show();
             }
         });
-
+        fragQuestion.findViewById(R.id.imgImage).setVisibility(View.INVISIBLE);
+            TextView txtheading = fragQuestion.findViewById(R.id.txtSubPart);
+            TextView txtQuestion = fragQuestion.findViewById(R.id.txtContent);
+            txtheading.setText("Basic Ratios");
+            txtQuestion.setText("The table shows the amount of games available at a local school. What is the ratio of board games to chess games?");
+            rb1.setText("4/3");
+            rb2.setText("3/4");
+            rb3.setText("3/2");
+            rb4.setText("5/3");
+            if(tries !=0) {
+                TextView hint = fragQuestion.findViewById(R.id.txtHint);
+                hint.setText("Counting the amount of board games and chess games will help you find the ratio between them.");
+            }
 
         return fragQuestion;
     }
@@ -104,18 +123,20 @@ public class FragmentQuestions extends Fragment {
         switch(view.getId()) {
             case R.id.ChoiceA:
                 if (checked)
-                    // action
+                    tries+=1;
                     break;
             case R.id.ChoiceB:
                 if (checked)
-                    // action
+                    Toast.makeText(getContext(),"Correct Answer!",Toast.LENGTH_LONG).show();
                     break;
             case R.id.ChoiceC:
                 if (checked)
+                    tries+=1;
                     // action
                     break;
             case R.id.ChoiceD:
                 if (checked)
+                    tries+=1;
                     // action
                     break;
         }

@@ -16,15 +16,18 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="142dp"
         android:layout_marginTop="24dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/txtContent"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/txtSubPart"
-        android:layout_marginTop="105dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="109dp"
+        android:gravity="center_horizontal|center"
         android:text="TextView" />
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,32 +36,28 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="80dp"
         android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/ChoiceA"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
         <RadioButton
             android:id="@+id/ChoiceB"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
         <RadioButton
             android:id="@+id/ChoiceC"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
         <RadioButton
             android:id="@+id/ChoiceD"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
     </RadioGroup>
 
     <ImageView
@@ -68,4 +67,11 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:src="@drawable/check_true" />
+
+    <TextView
+        android:id="@+id/txtHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Select a Choice" />
 </RelativeLayout>

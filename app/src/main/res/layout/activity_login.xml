@@ -32,8 +32,7 @@
             android:layout_below="@+id/edtUsername"
             android:ems="10"
             android:hint="Enter your Password"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnLogin"
